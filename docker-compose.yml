@@ -8,9 +8,11 @@ services:
       - ./app/:/app
       - ./script/:/script
     environment:
-      GITHUB_LOGIN_ID: Write Your Login ID
-      GITHUB_PASSWORD: Write Your Password
+      GITHUB_LOGIN_ID: Write Your Github Login ID
+      GITHUB_PASSWORD: Write Your Github Password
       GITHUB_REPO: Write Your Repository
+      SLACK_CHANNEL: Write Slack Channel Name
+      SLACK_API_TOKEN: Write Your Slack Api Token
     command:
       - /script/start_app.sh
     tty: true

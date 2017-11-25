@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  ruby:
+    build: ./
+    container_name: notifier
+    volumes:
+      - ./app/:/app
+      - ./script/:/script
+    environment:
+      GITHUB_LOGIN_ID: Write Your Login ID
+      GITHUB_PASSWORD: Write Your Password
+      GITHUB_REPO: Write Your Repository
+    command:
+      - /script/start_app.sh
+    tty: true
+
